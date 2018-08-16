@@ -18,7 +18,7 @@ kafka:
   ## kafka.nodes is set to number of nodes in kafka cluster
   nodes: 3
   ## kafka.jvmFlags are default java options to use with kafka
-  jvmFlags: -Xmx384G
+  jvmFlags: -Xmx3G
   ## kafka.storageSize is the default size of storage when using persistent volumes
   storageSize: 2GiB
   ## kafka.persistent is set to true to use persitent volumes
@@ -66,7 +66,7 @@ zookeeper:
 
 kafka-operator:
   ## enabled is set to true if kafka-operator should be deployed
-  enabled: true
+  enabled: false
   ## image is the name of kafka-operator container image to use
   image: nbogojevic/kafka-operator
   ## pullPolicy is the kubernetes policy to use for pulling images: Always, IfNotPresent, Never
@@ -96,10 +96,10 @@ global:
   hawkular: false   
 
   ## prometheus is set to true to enable prometheus metrics
-  prometheus: true
+  prometheus: false
 
   ## jolokia is set to true if jolokia JMX endpoint should be exposed
-  jolokia: true
+  jolokia: false
 
   ## jolokiaUsername is set to the name of jolokia user for basic authentication
   jolokiaUsername: jolokia
