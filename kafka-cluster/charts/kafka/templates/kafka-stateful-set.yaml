@@ -92,7 +92,7 @@ spec:
             port: 9092
           initialDelaySeconds: 10
         volumeMounts:
-        - name: datadir
+        - name: {{ .Values.global.applicationName }}-kafka-datadir
           mountPath: /opt/kafka/data
         - name: kafka-service-properties
           mountPath: /opt/mounted/config
@@ -101,12 +101,6 @@ spec:
           mountPath: /opt/kafka/auth
         {{- end }}
       volumes:
-      - name: datadir
-        {{- if .Values.persistent }}
-        # TODO Volume claim reference here
-        {{- else }}
-        emptyDir: {}
-        {{- end }}
       - name: kafka-service-properties
         configMap:
           name: {{ .Values.global.applicationName }}-kafka-server-properties
