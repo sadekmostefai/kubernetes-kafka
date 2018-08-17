@@ -6,15 +6,15 @@ entries:
     description: Kafka cluster
     digest: 74a9df121354f406bd42b5d45c4868fc7cd0cfcdbdf8b2ec5d5b948b4a3020cd
     engine: gotpl
-    home: https://github.com/nbogojevic/kubernetes-kafka
+    home: https://github.com/sadekmostefai/kubernetes-kafka
     keywords:
     - kafka
     - zookeeper
     maintainers:
-    - name: Nenad Bogojević
+    - name: Sadek Mostefai
     name: kafka-cluster
     sources:
-    - https://github.com/nbogojevic/kubernetes-kafka
+    - https://github.com/sadekmostefai/kubernetes-kafka
     urls:
     - kafka-cluster-0.2.0.tgz
     version: 0.2.0
